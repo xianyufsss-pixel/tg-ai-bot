@@ -1,0 +1,12 @@
+[Unit]
+Description=Telegram AI Bot
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+WorkingDirectory=/opt/tg-ai-bot
+ExecStart=/usr/bin/python3 /opt/tg-ai-bot/bot.py
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target

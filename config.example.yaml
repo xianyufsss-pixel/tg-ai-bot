@@ -1,0 +1,25 @@
+# Telegram AI Bot - 后端以后再配，改这里不用改代码
+bot:
+  token: "PUT_BOT_TOKEN_HERE"   # BotFather 给的 token，以后填，勿提交到公开仓库
+  channel: ""                  # 强制订阅频道，如 @zaka，不填则不校验
+  admin_ids: []                # 管理员 Telegram user id
+
+ai:
+  # 以后配后端时，只改下面这几项
+  provider: "openai_compatible"  # openai_compatible | deepseek | openai
+  base_url: "https://api.openai.com/v1"  # DeepSeek 就填 https://api.deepseek.com/v1
+  api_key: "PUT_AI_API_KEY_HERE"
+  model: "gpt-4o-mini"          # DeepSeek 就填 deepseek-chat
+  system_prompt: "你是一个有用的 AI 助手，用用户使用的语言回答。"
+  temperature: 0.7
+  max_history: 20              # 每用户保留最近多少条对话
+
+nezha:
+  api_key: "PUT_NEZHA_API_KEY_HERE"  # 可选，配了才能用 nezha_servers 工具查 11 台状态
+
+quota:
+  free_per_day: 20             # 每天免费对话次数，0 = 不限
+  referral_bonus: 10           # 邀请一人奖励次数
+
+db:
+  path: "bot.db"
